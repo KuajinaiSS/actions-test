@@ -1,0 +1,15 @@
+name: "Hola Mundo"
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  deploy-test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Haciendo pull en el codigo"
+      - run: echo "pull realizado con exito"
+      - run: echo "importando dependecias"
+      - run: echo "dependencias importadas con exitó"
