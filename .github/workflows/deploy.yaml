@@ -1,15 +1,24 @@
-name: "Hola Mundo"
-
+name: logs-push-to-main
 on:
   push:
-    branches:
-      - "main"
+    branches: [ "main" ]
 
 jobs:
-  deploy-test-job:
-    runs-on: ubuntu-latest
+  trabajo-de-mensajes:
+    runs-on: ubuntu-latest 
+
     steps:
-      - run: echo "Haciendo pull en el codigo"
-      - run: echo "pull realizado con exito"
-      - run: echo "importando dependecias"
-      - run: echo "dependencias importadas con exitó"
+      - name: Get Repository
+        uses: actions/checkout@v4
+
+      - name: Log 1
+        run: echo "¡Nuevo commit detectado en la rama principal (main)!"
+
+      - name: Log 2
+        run: echo "Iniciando el flujo de trabajo..."
+
+      - name: Log 3
+        run: echo "Realizando algunas verificaciones..."
+
+      - name: Log 4
+        run: echo "✅¡Flujo de trabajo completado exitosamente!"
